@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora da Teteca</title>
+    <link rel="icon" href="Images/icone.jpg" type="image/jpg">
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <input id="display" type="text" readonly tabindex="-1" maxlength="10">
+        </div>
+        <div id="rowsWrapper">
+            <div class="row">
+                <button onclick="limparTudo()" tabindex="-1">AC</button>
+                <button onclick="limparUltimoDigito()" tabindex="-1">C</button>
+                <button onclick="onClick_porcentagem()" tabindex="-1">%</button>
+                <button onclick="definirOperacao('/')" tabindex="-1">/</button>
+            </div>
+            <div class="row">
+                <button onclick="onClick_numero(7)" tabindex="-1">7</button>
+                <button onclick="onClick_numero(8)" tabindex="-1">8</button>
+                <button onclick="onClick_numero(9)" tabindex="-1">9</button>
+                <button onclick="definirOperacao('*')" tabindex="-1">x</button>
+            </div>
+            <div class="row">
+                <button onclick="onClick_numero(4)" tabindex="-1">4</button>
+                <button onclick="onClick_numero(5)" tabindex="-1">5</button>
+                <button onclick="onClick_numero(6)" tabindex="-1">6</button>
+                <button onclick="definirOperacao('-')" tabindex="-1">-</button>
+            </div>
+            <div class="row">
+                <button onclick="onClick_numero(1)" tabindex="-1">1</button>
+                <button onclick="onClick_numero(2)" tabindex="-1">2</button>
+                <button onclick="onClick_numero(3)" tabindex="-1">3</button>
+                <button onclick="definirOperacao('+')" tabindex="-1">+</button>
+            </div>
+            <div class="row">
+                <button onclick="onClick_numero(0)" tabindex="-1">0</button>
+                <button onclick="onClick_virgula()" tabindex="-1">,</button>
+                <button onclick="onClick_inverterSinal()" tabindex="-1"><img src="Images/plus-minus.svg"></button>
+                <button onclick="onClick_igual()" tabindex="-1">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
