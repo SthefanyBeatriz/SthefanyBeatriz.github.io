@@ -12,7 +12,7 @@ function atualizarDisplay() {
 
 function onClick_numero(num) {
     num = String(num);
-    if (valorAtual > 16) return;
+    if (valorAtual.length > 16) return;
     if (num == '0' && valorAtual == '0') {
         return;
     }
@@ -24,7 +24,7 @@ function onClick_numero(num) {
         bNovoValor = false;
     }
     else if (valorAtual == '-0' || bNovoValor == true) {
-        valorAtual = -num;
+        valorAtual = '-' + num;
         bNovoValor = false;
     }
     else {
@@ -80,20 +80,20 @@ function definirOperacao(novaOperacao) {
 }
 function onClick_igual() {
     if (operacao == '+') {
-        valorAtual = String((Number(ultimoValor.replace(',', '.')) + Number(valorAtual.replace(',', '.'))).toFixed(16)).replace('.', ',');
+        valorAtual = String(Number((Number(ultimoValor.replace(',', '.')) + Number(valorAtual.replace(',', '.'))).toFixed(16))).replace('.', ',');
     }
     if (operacao == '-') {
-        valorAtual = String((Number(ultimoValor.replace(',', '.')) - Number(valorAtual.replace(',', '.'))).toFixed(16)).replace('.', ',');
+        valorAtual = String(Number((Number(ultimoValor.replace(',', '.')) - Number(valorAtual.replace(',', '.'))).toFixed(16))).replace('.', ',');
     }
     if (operacao == '*') {
-        valorAtual = String((Number(ultimoValor.replace(',', '.')) * Number(valorAtual.replace(',', '.'))).toFixed(16)).replace('.', ',');
+        valorAtual = String(Number((Number(ultimoValor.replace(',', '.')) * Number(valorAtual.replace(',', '.'))).toFixed(16))).replace('.', ',');
     }
     if (operacao == '/') {
         if (Number(valorAtual.replace(',', '.')) == 0) {
             valorAtual = '0';
         }
         else {
-            valorAtual = String((Number(ultimoValor.replace(',', '.')) / Number(valorAtual.replace(',', '.'))).toFixed(16)).replace('.', ',');
+            valorAtual = String(Number((Number(ultimoValor.replace(',', '.')) / Number(valorAtual.replace(',', '.'))).toFixed(16))).replace('.', ',');
         }
     }
     ultimoValor = '0';
