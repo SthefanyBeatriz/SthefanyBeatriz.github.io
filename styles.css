@@ -9,16 +9,17 @@ body{
 
 body>div {
     background-color: #d8ddef;
-    padding: 10px;
+    padding: 1.5em;
     border-radius: 4px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .15);
-    height: 75%;
+    height: 90vh;
     min-width: fit-content;
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 720px;
+    /* max-height: 200px; */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    margin: 10px;
 }
 
 #display {
@@ -30,6 +31,7 @@ body>div {
     border-radius: 4px;
     color: azure;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .15);
+    font-size: 8vmin;
 }
 
 button {
@@ -46,7 +48,7 @@ button {
     border-radius: 8px;
     color: #f0ffff;
     transition: 150ms;
-
+    font-size: 8vmin;
 }
 
 button:hover {
